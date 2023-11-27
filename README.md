@@ -18,13 +18,13 @@ Flutter Developer Bootcamp
 
 # 二、快速掌握Dart
 
-## 1.Dart模块介绍
+## 2.1 Dart模块介绍
 
 - 在vscode中，按快捷键 `ctrl` + `shift` + `p`，输入`dart`，选择`Dart: New Project`。
 - 选择项目类型 `Console Application`，指定文件夹路径。
 - 输入项目名称 `dart_get_up_to_speed`。
 
-## 2.变量与基本类型(variables and primitive types)
+## 2.2 变量与基本类型(variables and primitive types)
 
 (1). 定义一个字符串变量
 ```dart
@@ -92,7 +92,7 @@ final myString = 'Hello world';
 
 > 定义为常量，需同时指定初始值。
 
-## 3. 可空类型(non-nullability)
+## 2.3 可空类型(non-nullability)
 
 使用`?`，将变量变为可空类型。
 ```dart
@@ -106,7 +106,7 @@ String? impossible = 'abc';
 print(impossible!.length);
 ```
 
-## 4. 操作符(Operators)
+## 2.4 操作符(Operators)
 
 (1). 加、减、乘、除和取余运算符。
 ```dart
@@ -149,7 +149,7 @@ String myString2 = 'Hello ${5 + 5 / 2 + 123}';
 print(myString2);   // 'Hello 130.5'
 ```
 
-## 5. 控制流(if和switch)
+## 2.5 控制流(if和switch)
 
 使用`if`进行条件判断。
 ```dart
@@ -183,7 +183,7 @@ switch (myInteger) {
 }
 ```
 
-## 6. 循环
+## 2.6 循环
 
 使用`for`进行循环。
 ```dart
@@ -210,7 +210,7 @@ do {
 }while(i < 10);
 ```
 
-## 7. 函数基础
+## 2.7 函数基础
 
 (1). `main`函数，就是一个带参无返回函数。
 ```dart
@@ -299,9 +299,9 @@ IntTransformer twice(IntTransformer f) {
 }
 ```
 
-## 8. 集合
+## 2.8 集合
 
-### 8.1 集合基础
+### 2.8.1 集合基础
 
 (1). 定义`List`集合。
 ```dart
@@ -392,7 +392,7 @@ final list2 = ['what', 'up'];
 ];
 ```
 
-## 9. 枚举
+## 2.9 枚举
 
 使用`enum`定义枚举。
 ```dart
@@ -414,7 +414,7 @@ print(userAccountType.index);
 AccountType.values[1];
 ```
 
-## 10. Pub包系统
+## 2.10 Pub包系统
 
 通过`pubspec.yaml`文件管理依赖项。
 ```yaml
@@ -429,7 +429,7 @@ flutter pub get
 
 官方包仓储库地址：https://pub.dev
 
-## 11. Linting
+## 2.11 Linting
 
 安装`Lint`包，检查代码的质量以及编写方式。
 ```yaml
@@ -442,9 +442,9 @@ dev_dependencies:
 include: package:lint/analysis_options.yaml
 ```
 
-## 12. 类
+## 2.12 类
 
-### 12.1 类基础
+### 2.12.1 类基础
 
 (1). 使用`class`定义类
 ```dart
@@ -565,7 +565,7 @@ User myUser = User({
 print(myUser.hasLongName());
 ```
 
-### 12.2 类的静态成员
+### 2.12.2 类的静态成员
 
 ```dart
 class User {
@@ -589,7 +589,7 @@ User.myMethod();
 User.minNameLength;
 ```
 
-### 12.3 类的私有成员
+### 2.12.3 类的私有成员
 
 ```dart
 class Example{
@@ -604,7 +604,7 @@ class Example{
 }
 ```
 
-### 12.4 类的属性
+### 2.12.4 类的属性
 
 ```dart 
 class User {
@@ -642,7 +642,7 @@ print(user.fullName);
 print(user.email)
 ```
 
-### 12.5 类相等
+### 2.12.5 类相等
 
 ```dart
 class User {
@@ -723,7 +723,7 @@ final user2 = User({
 print(user1 == user2);
 ```
 
-### 12.6 类的继承
+### 2.12.6 类的继承
 
 使用`extends`关键字来进行类的继承。
 ```dart
@@ -768,7 +768,7 @@ void main(List<String> arguments) {
 }
 ```
 
-### 12.7 工厂构造函数
+### 2.12.7 工厂构造函数
 
 ```dart
 class User {
@@ -801,7 +801,7 @@ void main(List<String> arguments) {
 }
 ```
 
-### 12.8 继承抽象类
+### 2.12.8 继承抽象类
 
 定义抽象类
 ```dart
@@ -853,7 +853,7 @@ class Admin extends User {
 }
 ```
 
-### 12.9 继承接口
+### 2.12.9 继承接口
 
 ```dart
 class RegularClass {
@@ -894,9 +894,11 @@ class IntegerDataReader implements DataReader {
         return 12345;
     }
 }
+```
 
-### 12.10 泛型
+### 2.12.10 泛型
 
+定义泛型抽象类与泛型方法
 ```dart
 abstract class DataReader<T> {
     T readData();
@@ -923,7 +925,7 @@ class StringDataReader implements DataReader<String> {
 }
 ```
 
-### 12.11 混合(Mixins)
+### 2.12.11 混合(Mixins)
 
 使用`with`将其他类中的属性、方法等混合到当前类中。
 ```dart
@@ -961,7 +963,7 @@ class ChatBot with ElevatedClient {
 }
 ```
 
-### 12.12 扩展(Extensions)
+### 2.12.12 扩展(Extensions)
 
 ```dart
 extension StringDuplication on String {
@@ -983,7 +985,7 @@ void main(List<String> arguments) {
 }
 ```
 
-## 13. 更多文件和包的内容
+## 2.13 更多文件和包的内容
 
 dart_get_up_to_speed.dart
 ```dart
@@ -1007,7 +1009,7 @@ void example() {
 }
 ```
 
-## 14. 不可变数据的类(Immutable Data Classes)
+## 2.14 不可变数据的类(Immutable Data Classes)
 
 ```dart
 void main(List<String> arguments) {
@@ -1037,7 +1039,7 @@ class Person {
 }
 ```
 
-## 15. Freezed
+## 2.15 Freezed
 
 在`pubspec.yaml`中添加依赖包
 ```yaml
@@ -1069,7 +1071,7 @@ class Person with _$Person {
 dart run build_runner build --delete-conflicting-outputs 
 ```
 
-## 16. 错误处理(Error Handling)
+## 2.16 错误处理(Error Handling)
 
 捕获异常并打印
 ```dart
@@ -1112,9 +1114,9 @@ class MyCustomException implements Exception {
 }
 ```
 
-## 17. 异步
+## 2.17 异步
 
-### 17.1 异步特性(Asynchrony Futures)
+### 2.17.1 异步特性(Asynchrony Futures)
 
 添加`http`包依赖
 ```yaml
@@ -1146,7 +1148,7 @@ void main(List<String> arguments) {
 }
 ```
 
-### 17.2 异步流(Asynchrony Stream)
+### 2.17.2 异步流(Asynchrony Stream)
 
 ```dart 
 Future<void> main(List<String> arguments) async {
@@ -1161,7 +1163,7 @@ Future<void> main(List<String> arguments) async {
 }
 ```
 
-### 17.3 异步流生成与操作
+### 2.17.3 异步流生成与操作
 
 ```dart
 Future<void> main(List<String> arguments) async {
@@ -1189,3 +1191,10 @@ Stream<String> createMessageStream() async* {
     yield 'FLUTTER';
 }
 ```
+
+# 三、Flutter基础
+
+## 3.1 模块介绍
+
+我们将构建Flutter小部件，这是基本的构建块，明白如何管理状态，通过第三方包了解可变和不可变的状态管理。
+
