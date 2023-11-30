@@ -1198,3 +1198,13 @@ Stream<String> createMessageStream() async* {
 
 我们将构建Flutter小部件，这是基本的构建块，明白如何管理状态，通过第三方包了解可变和不可变的状态管理。
 
+## 3.2 Flutter 101
+
+在VSCode中按快捷键`F1`，然后输入`Flutter: New Application Project`，指定项目路径，然后为项目指定名称。
+
+### 3.2.1 配置国内镜像地址
+
+修改 `android` -> `gradle` -> `wrapper` -> `gradle-wrapper.properties` 文件
+```properties
+distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-7.5-all.zip
+```
