@@ -10,6 +10,17 @@ class RangeSelectPage extends StatefulWidget {
 class _RangeSelectPageState extends State<RangeSelectPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Select Range'),
+      ),
+      body: Form(
+        child: Container(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.arrow_forward),
+        onPressed: () {},
+      ),
+    );
   }
 }
