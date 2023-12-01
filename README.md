@@ -1274,7 +1274,7 @@ class RangeSelectorTextFormField extends StatelessWidget {
 }
 ```
 
-## 3.6
+## 3.6 最小值和最大值的输入框
 
 ```dart
 class RangeSelectorTextFormField extends StatelessWidget {
@@ -1302,5 +1302,16 @@ class RangeSelectorTextFormField extends StatelessWidget {
     );
   }
 }
+```
 
+## 3.7 表单验证器
+
+```dart
+validator: (value) {
+    if (value == null || int.tryParse(value) == null) {
+        return 'Must be an integer';
+    }
+
+    return null;
+},
 ```
