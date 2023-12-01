@@ -20,27 +20,9 @@ class _RangeSelectPageState extends State<RangeSelectPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextFormField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Minimum',
-                ),
-                keyboardType: TextInputType.numberWithOptions(
-                  decimal: false,
-                  signed: true,
-                ),
-              ),
+              RangeSelectorTextFormField(labelText: 'Minimum'),
               SizedBox(height: 12),
-              TextFormField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Maximum',
-                ),
-                keyboardType: TextInputType.numberWithOptions(
-                  decimal: false,
-                  signed: true,
-                ),
-              ),
+              RangeSelectorTextFormField(labelText: 'Maximum'),
             ],
           ),
         ),
@@ -48,6 +30,29 @@ class _RangeSelectPageState extends State<RangeSelectPage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_forward),
         onPressed: () {},
+      ),
+    );
+  }
+}
+
+class RangeSelectorTextFormField extends StatelessWidget {
+  const RangeSelectorTextFormField({
+    super.key,
+    required this.labelText,
+  });
+
+  final String labelText;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: labelText,
+      ),
+      keyboardType: TextInputType.numberWithOptions(
+        decimal: false,
+        signed: true,
       ),
     );
   }

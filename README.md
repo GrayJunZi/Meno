@@ -1246,3 +1246,30 @@ child: Padding(
 ),
 ),
 ```
+
+## 3.5 创建组件移除重复代码
+
+```dart
+class RangeSelectorTextFormField extends StatelessWidget {
+  const RangeSelectorTextFormField({
+    super.key,
+    required this.labelText,
+  });
+
+  final String labelText;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: labelText,
+      ),
+      keyboardType: TextInputType.numberWithOptions(
+        decimal: false,
+        signed: true,
+      ),
+    );
+  }
+}
+```
