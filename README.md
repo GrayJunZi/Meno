@@ -1273,3 +1273,34 @@ class RangeSelectorTextFormField extends StatelessWidget {
   }
 }
 ```
+
+## 3.6
+
+```dart
+class RangeSelectorTextFormField extends StatelessWidget {
+  const RangeSelectorTextFormField({
+    super.key,
+    required this.labelText,
+    required this.intValueSetter,
+  });
+
+  final String labelText;
+  final void Function(int value) intValueSetter;
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder(),
+        labelText: labelText,
+      ),
+      keyboardType: TextInputType.numberWithOptions(
+        decimal: false,
+        signed: true,
+      ),
+      onSaved: (newValue) => intValueSetter(int.parse(newValue ?? '')),
+    );
+  }
+}
+
+```
