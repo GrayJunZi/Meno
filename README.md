@@ -1315,3 +1315,16 @@ validator: (value) {
     return null;
 },
 ```
+
+## 3.8 验证与保存表单
+
+```dart
+ floatingActionButton: FloatingActionButton(
+    child: Icon(Icons.arrow_forward),
+    onPressed: () {
+        if (formKey.currentState?.validate() ?? false) {
+        formKey.currentState?.save();
+        }
+    },
+),
+```

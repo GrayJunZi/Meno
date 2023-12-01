@@ -8,6 +8,7 @@ class RangeSelectPage extends StatefulWidget {
 }
 
 class _RangeSelectPageState extends State<RangeSelectPage> {
+  final formKey = GlobalKey<FormState>();
   int _min = 0;
   int _max = 0;
 
@@ -18,6 +19,7 @@ class _RangeSelectPageState extends State<RangeSelectPage> {
         title: Text('Select Range'),
       ),
       body: Form(
+        key: formKey,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -38,7 +40,11 @@ class _RangeSelectPageState extends State<RangeSelectPage> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_forward),
-        onPressed: () {},
+        onPressed: () {
+          if (formKey.currentState?.validate() ?? false) {
+            formKey.currentState?.save();
+          }
+        },
       ),
     );
   }
