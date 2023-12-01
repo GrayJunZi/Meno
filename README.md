@@ -1208,3 +1208,41 @@ Stream<String> createMessageStream() async* {
 ```properties
 distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-7.5-all.zip
 ```
+
+## 3.3 RangeSelectPage 大纲
+
+## 3.4 创建输入表单
+
+```dart
+body: Form(
+child: Padding(
+    padding: const EdgeInsets.all(16.0),
+    child: Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+        TextFormField(
+        decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'Minimum',
+        ),
+        keyboardType: TextInputType.numberWithOptions(
+            decimal: false,
+            signed: true,
+        ),
+        ),
+        SizedBox(height: 12),
+        TextFormField(
+        decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'Maximum',
+        ),
+        keyboardType: TextInputType.numberWithOptions(
+            decimal: false,
+            signed: true,
+        ),
+        ),
+    ],
+    ),
+),
+),
+```
