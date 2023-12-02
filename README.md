@@ -1334,3 +1334,5 @@ validator: (value) {
 ## 3.10 导航到Randomizer页面
 
 ## 3.11 实现Randomizer页面
+
+## 3.12 实现Flutter钩子(Hooks)
