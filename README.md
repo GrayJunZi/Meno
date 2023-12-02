@@ -1332,3 +1332,5 @@ validator: (value) {
 ## 3.9 分离表单组件
 
 ## 3.10 导航到Randomizer页面
+
+## 3.11 实现Randomizer页面
