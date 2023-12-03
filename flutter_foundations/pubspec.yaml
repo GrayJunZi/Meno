@@ -30,7 +30,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^6.1.1
+  flutter_riverpod:
+      git:
+        url: https://github.com/rrousselGit/river_pod.git
+        ref: devtool
+        path: packages/flutter_riverpod
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -47,6 +51,13 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+
+dependency_overrides:
+  riverpod:
+    git:
+      url: https://github.com/rrousselGit/river_pod.git
+      ref: devtool
+      path: packages/riverpod
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

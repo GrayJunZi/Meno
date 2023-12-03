@@ -70,11 +70,28 @@ packages:
       url: "https://mirrors.sjtug.sjtu.edu.cn/dart-pub/"
     source: hosted
     version: "2.0.3"
+  flutter_riverpod:
+    dependency: "direct main"
+    description:
+      path: "packages/flutter_riverpod"
+      ref: devtool
+      resolved-ref: "32f3cd0c7d08dcd465c5f75d1c1d45ed7f5fdb8c"
+      url: "https://github.com/rrousselGit/river_pod.git"
+    source: git
+    version: "3.0.0-dev.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+  git:
+    dependency: "direct overridden"
+    description:
+      name: git
+      sha256: "1982737427ef1ef2bb69027ea0234469774495e86afe202de81ee46d37364e55"
+      url: "https://mirrors.sjtug.sjtu.edu.cn/dart-pub/"
+    source: hosted
+    version: "2.2.1"
   lints:
     dependency: transitive
     description:
@@ -107,14 +124,6 @@ packages:
       url: "https://mirrors.sjtug.sjtu.edu.cn/dart-pub/"
     source: hosted
     version: "1.10.0"
-  nested:
-    dependency: transitive
-    description:
-      name: nested
-      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
-      url: "https://mirrors.sjtug.sjtu.edu.cn/dart-pub/"
-    source: hosted
-    version: "1.0.0"
   path:
     dependency: transitive
     description:
@@ -123,14 +132,14 @@ packages:
       url: "https://mirrors.sjtug.sjtu.edu.cn/dart-pub/"
     source: hosted
     version: "1.8.3"
-  provider:
-    dependency: "direct main"
+  riverpod:
+    dependency: transitive
     description:
-      name: provider
-      sha256: "9a96a0a19b594dbc5bf0f1f27d2bc67d5f95957359b461cd9feb44ed6ae75096"
+      name: riverpod
+      sha256: "0f41a697a17609a7ac18e5fe0d5bdbe4c1ff7e7da6523baf46a203df0c44eaf2"
       url: "https://mirrors.sjtug.sjtu.edu.cn/dart-pub/"
     source: hosted
-    version: "6.1.1"
+    version: "3.0.0-dev.3"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -152,6 +161,14 @@ packages:
       url: "https://mirrors.sjtug.sjtu.edu.cn/dart-pub/"
     source: hosted
     version: "1.11.1"
+  state_notifier:
+    dependency: transitive
+    description:
+      name: state_notifier
+      sha256: b8677376aa54f2d7c58280d5a007f9e8774f1968d1fb1c096adcb4792fba29bb
+      url: "https://mirrors.sjtug.sjtu.edu.cn/dart-pub/"
+    source: hosted
+    version: "1.0.0"
   stream_channel:
     dependency: transitive
     description:
@@ -202,4 +219,4 @@ packages:
     version: "0.3.0"
 sdks:
   dart: ">=3.2.0 <4.0.0"
-  flutter: ">=1.16.0"
+  flutter: ">=3.0.0"
