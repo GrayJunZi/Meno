@@ -1336,3 +1336,5 @@ validator: (value) {
 ## 3.11 实现Randomizer页面
 
 ## 3.12 实现Flutter钩子(Hooks)
+
+## 3.13 创建ChangeNotifier
