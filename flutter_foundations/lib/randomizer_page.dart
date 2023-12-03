@@ -31,7 +31,7 @@ class RandomizerPage extends ConsumerWidget {
         onPressed: () {
           // min = 10, max = 20
           // 10 + 20 + 1 - 10 = 21 -  1 = 20
-          ref.read(randomizerProvider).generateRandomNumber();
+          ref.read(randomizerProvider.notifier).generateRandomNumber();
 
           },
         label: const Text('Generate'),

@@ -1340,3 +1340,5 @@ validator: (value) {
 ## 3.13 创建ChangeNotifier
 
 ## 3.14 使用Riverpod
+
+## 3.15 使用StateNotifier管理状态
