@@ -1342,3 +1342,8 @@ validator: (value) {
 ## 3.14 使用Riverpod
 
 ## 3.15 使用StateNotifier管理状态
+
+# 四、生产级项目: 仓库查看器(Repo Viewer)
+
+## 4.1 RepoViewer介绍
+
