@@ -1394,3 +1394,17 @@ Authorization: bearer TOKEN
     - 仓储(Repositories)
     - 远程服务(Remote Services) -> `API`
     - 本地服务(Local Services) -> `DB`
+
+## 4.5 设置分析选项(Setting up Analysis Options)
+
+```yaml
+analyzer:
+  errors:
+    missing_return: error
+    must_be_immutable: error
+    must_call_super: error
+    invalid_use_of_protected_member: error
+    parameter_assignments: error
+    sort_unnamed_constructors_first: ignore
+    sort_pub_dependencies: ignore
+```
