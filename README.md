@@ -1378,3 +1378,19 @@ dependency_overrides:
 GET https://api.github.com/user/starred?page=1
 Authorization: bearer TOKEN
 ```
+
+## 4.4 架构与依赖
+
+将采用DDD架构进行设计。
+
+- `Presentation`
+    - 组件(Widget)
+    - 状态(State)
+- `Application`
+    - 不可变通知(Immutable Notifiers)
+- `Domain`
+    - 实体(Entities)
+- `Infrastructure`
+    - 仓储(Repositories)
+    - 远程服务(Remote Services) -> `API`
+    - 本地服务(Local Services) -> `DB`
