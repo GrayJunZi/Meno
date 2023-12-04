@@ -1341,6 +1341,27 @@ validator: (value) {
 
 ## 3.14 使用Riverpod
 
+```yaml
+dependencies:
+  flutter_riverpod:
+      git:
+        url: https://github.com/rrousselGit/river_pod.git
+        ref: devtool
+        path: packages/flutter_riverpod
+  freezed_annotation: ^2.4.1
+
+dev_dependencies:
+  build_runner: ^2.4.7
+  freezed: ^2.4.5
+
+dependency_overrides:
+  riverpod:
+    git:
+      url: https://github.com/rrousselGit/river_pod.git
+      ref: devtool
+      path: packages/riverpod
+```
+
 ## 3.15 使用StateNotifier管理状态
 
 # 四、生产级项目: 仓库查看器(Repo Viewer)
@@ -1349,3 +1370,11 @@ validator: (value) {
 
 ## 4.2 创建项目
 
+在VSCode中按快捷键`F1`，然后输入`Flutter: New Application Project`，指定项目路径，最后为项目指定名称。
+
+## 4.3 创建OAuth并测试请求
+
+```rest
+GET https://api.github.com/user/starred?page=1
+Authorization: bearer TOKEN
+```
