@@ -1432,3 +1432,5 @@ flutter pub run build_runner watch --delete-conflicting-outputs
 ## 4.7 添加认证基础设施层以及应用层
 
 ## 4.8 添加展示层页面
+
+## 4.9 创建AppWidget
