@@ -1384,8 +1384,8 @@ Authorization: bearer TOKEN
 将采用DDD架构进行设计。
 
 - `Presentation`
-    - 组件(Widget)
-    - 状态(State)
+    - 组件(Widgets)
+    - 状态(States)
 - `Application`
     - 不可变通知(Immutable Notifiers)
 - `Domain`
@@ -1408,3 +1408,26 @@ analyzer:
     sort_unnamed_constructors_first: ignore
     sort_pub_dependencies: ignore
 ```
+
+## 4.6 认证失败
+
+```dart
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'auth_failure_freezed.dart';
+
+@freezed
+class AuthFailure with _$AuthFailure {
+  const AuthFailure._();
+  const factory AuthFailure.server([String? message]) = _Server;
+  const factory AuthFailure.storage() = _Storage;
+}
+```
+
+运行命令
+```bash
+flutter pub run build_runner watch --delete-conflicting-outputs
+```
+
+## 4.7 添加认证基础设施层以及应用层
+
