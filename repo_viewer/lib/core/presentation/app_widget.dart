@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:repo_viewer/splash/presentation/splash_page.dart';
+import 'package:repo_viewer/core/presentation/routes/app_router.dart';
 
 class AppWidget extends StatelessWidget {
-  const AppWidget({super.key});
+  final _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Repo Viewer',
-      home: SplashPage(),
+      routerConfig: _appRouter.config(),
     );
   }
 }
-
