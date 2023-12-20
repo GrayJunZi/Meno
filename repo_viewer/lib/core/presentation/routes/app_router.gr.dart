@@ -15,6 +15,18 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    AuthorizationRoute.name: (routeData) {
+      final args = routeData.argsAs<AuthorizationRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: AuthorizationPage(
+          key: args.key,
+          authorizationUrl: args.authorizationUrl,
+          onAuthorizationCodeRedirectAttempt:
+              args.onAuthorizationCodeRedirectAttempt,
+        ),
+      );
+    },
     SignInRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -34,6 +46,50 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [AuthorizationPage]
+class AuthorizationRoute extends PageRouteInfo<AuthorizationRouteArgs> {
+  AuthorizationRoute({
+    Key? key,
+    required Uri authorizationUrl,
+    required void Function(Uri) onAuthorizationCodeRedirectAttempt,
+    List<PageRouteInfo>? children,
+  }) : super(
+          AuthorizationRoute.name,
+          args: AuthorizationRouteArgs(
+            key: key,
+            authorizationUrl: authorizationUrl,
+            onAuthorizationCodeRedirectAttempt:
+                onAuthorizationCodeRedirectAttempt,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'AuthorizationRoute';
+
+  static const PageInfo<AuthorizationRouteArgs> page =
+      PageInfo<AuthorizationRouteArgs>(name);
+}
+
+class AuthorizationRouteArgs {
+  const AuthorizationRouteArgs({
+    this.key,
+    required this.authorizationUrl,
+    required this.onAuthorizationCodeRedirectAttempt,
+  });
+
+  final Key? key;
+
+  final Uri authorizationUrl;
+
+  final void Function(Uri) onAuthorizationCodeRedirectAttempt;
+
+  @override
+  String toString() {
+    return 'AuthorizationRouteArgs{key: $key, authorizationUrl: $authorizationUrl, onAuthorizationCodeRedirectAttempt: $onAuthorizationCodeRedirectAttempt}';
+  }
 }
 
 /// generated route for
