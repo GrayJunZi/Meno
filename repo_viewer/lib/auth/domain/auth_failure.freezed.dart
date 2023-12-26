@@ -119,7 +119,7 @@ class _$ServerImpl extends _Server {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ServerImpl &&
@@ -235,7 +235,7 @@ class _$StorageImpl extends _Storage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType && other is _$StorageImpl);
   }
